@@ -18,7 +18,7 @@ class Sandwich():
 if __name__ == "__main__":
   # If you run this file from the terminal
   # this block is executed.
-  sandwich = Sandwich("Meatball Sub")
+  sandwich = Sandwich("Meatball")
   sandwich.add_ingredients("French", "Marinara", "Meatballs")
   print(sandwich.ingredients)
   sandwich.remove_ingredient("Meatballs")
