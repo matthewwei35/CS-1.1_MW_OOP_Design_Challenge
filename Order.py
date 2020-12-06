@@ -23,7 +23,7 @@ if __name__ == "__main__":
   # If you run this file from the terminal
   # this block is executed.
   order = Order("Matthew")
-  sandwich = Sandwich("Meatball")
+  sandwich = Sandwich("Meatball", 6.99)
   sandwich.add_ingredients("French", "Marinara", "Meatballs")
   print(sandwich.ingredients)
   order.add_sandwich(sandwich)
