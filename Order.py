@@ -13,21 +13,22 @@ class Order:
     for sandwich in self.sandwiches:
       print(sandwich.name)
 
+  def add_custom_sandwich(self, name, price, bread, sauce, filling):
+    new_sandwich = Sandwich(name, price)
+    new_sandwich.add_ingredients(bread, sauce, filling)
+    self.sandwiches.append(new_sandwich)
+
+  def add_sandwich(self, name, price):
+    new_sandwich = Sandwich(name, price)
+    self.sandwiches.append(new_sandwich)
+
   def remove_sandwich(self, name):
     self.sandwiches.remove(name)
 
-  def add_sandwich(self, sandwich):
-    self.sandwiches.append(sandwich)
-
 if __name__ == "__main__":
-  # If you run this file from the terminal
-  # this block is executed.
   order = Order("Matthew")
-  sandwich = Sandwich("Meatball", 6.99)
-  sandwich.add_ingredients("French", "Marinara", "Meatballs")
-  print(sandwich.ingredients)
-  order.add_sandwich(sandwich)
+  order.add_custom_sandwich("Meatball", 4.99, "French", "Marinara", "Meatballs")
+  order.add_custom_sandwich("Meatball", 4.99, "French", "Marinara", "Meatballs")
+  order.add_custom_sandwich("Meatball", 4.99, "French", "Marinara", "Meatballs")
   order.view_order()
-  print(order.order_name)
-  print(order.sandwiches)
-  order.remove_sandwich(sandwich)
+  
