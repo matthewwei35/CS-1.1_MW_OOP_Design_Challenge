@@ -3,7 +3,7 @@
 # ------------
 
 # Class Sandwich
-class Sandwich(object):
+class Sandwich:
   def __init__(self, name, price):
     self.name = name
     self.price = price
@@ -16,8 +16,6 @@ class Sandwich(object):
     self.ingredients.remove(name)
 
 if __name__ == "__main__":
-  # If you run this file from the terminal
-  # this block is executed.
   sandwich = Sandwich("Meatball", 6.99)
   sandwich.add_ingredients("French", "Marinara", "Meatballs")
   print(sandwich.ingredients)
