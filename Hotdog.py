@@ -6,7 +6,7 @@ from Sandwich import Sandwich
 # Class Hotdog
 class Hotdog(Sandwich):
   hotdog_length = 6
-  not_spicy = True
+  is_spicy = True
   def __init__(self, name, price):
     super().__init__(name, price)
     self.ingredients = list()
