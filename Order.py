@@ -10,8 +10,12 @@ class Order:
     self.sandwiches = list()
 
   def view_order(self):
+    total = 0
+    print(f"Thank you for coming, {self.order_name}!")
     for sandwich in self.sandwiches:
-      print(sandwich.name)
+      total += float(sandwich.price)
+      print(f"{sandwich.name} - {sandwich.price}")
+    print(f"Total:  {round(total, 2)}")
 
   def add_custom_sandwich(self, name, price, bread, sauce, filling):
     new_sandwich = Sandwich(name, price)

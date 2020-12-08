@@ -11,10 +11,13 @@ class Menu:
     self.build_menu()
 
   def build_menu(self):
-    menu_dict = { "Club Sandwich" : 4.00, "Italian" : 10.99, "Cheese Steak" : 5.99 }
+    menu_dict = { "Club Sandwich" : 4.99, "Italian" : 10.99, "Cheese Steak" : 5.99, "Chilli Dog" : 2.99}
+    print(f"---------------\n")
     for key, value in menu_dict.items():
       new_sandwich = Sandwich(key, value)
       self.menu_list.append(new_sandwich)
+      print(f"{key} - ${value}")
+    print(f"---------------\n")
 
   def remove_sandwich(self, name):
     self.menu_list.remove(name)
@@ -25,5 +28,4 @@ class Menu:
 
 if __name__ == "__main__":
   menu = Menu()
-  print(menu.menu_list)
     

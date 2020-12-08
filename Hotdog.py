@@ -10,6 +10,9 @@ class Hotdog(Sandwich):
   def __init__(self, name, price):
     super().__init__(name, price)
     self.ingredients = list()
+
+  def add_ingredients(self, sauce):
+    self.ingredients.extend([sauce])
   
   @classmethod
   def increase_length(cls, amount):
